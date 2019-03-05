@@ -4,10 +4,13 @@
     <meta charset="utf-8" />
     <title></title>
 	<script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
-	<script>
-	alert("Привет");
-	document.write("123");
-	</script>
+	<script type="text/javascript"> 
+  VK.init(function() { 
+     console.log("Ok");
+  }, function() { 
+     console.log("No");
+}, '5.92'); 
+</script>
 </head>
 <body>
     <h1> Привет</h1>

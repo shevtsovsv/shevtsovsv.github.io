@@ -4,15 +4,142 @@
     <meta charset="utf-8" />
     <title></title>
 	<script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
-	<script type="text/javascript"> 
-  VK.init(function() { 
-     console.log("Ok");
-  }, function() { 
-     console.log("No");
-}, '5.92'); 
-</script>
 </head>
 <body>
-    <h1> Привет</h1>
+    
+
+		<canvas id="c1" width="800" height="600"></canvas>
+
+	
+	
+<script>
+var x_max=7, x_min=-7, dx=0.1;	
+var mas = [];
+
+var f2=function() {
+	
+	
+	var n = (x_max-x_min)/dx, m = 2;
+
+	for (let i = 0; i < n+1; i++){
+		mas[i] = [];
+		for (var j = 0; j < m; j++){
+			mas[i][j] = 0;
+	}}	
+}
+var graf=function() {
+		var j=0;
+		for (let i=x_min; i<=x_max; i+=dx){
+			mas[j][0]=i;
+			mas[j][1]=0.1*i*i;
+			j++;
+		}	
+	}
+
+f2();
+graf();
+console.log(mas);
+
+
+var canvas = document.getElementById('c1');
+var ctx = canvas.getContext('2d');  
+ctx.beginPath();
+ctx.lineWidth="5";
+ctx.strokeStyle="blue";
+ctx.moveTo(400,50);
+ctx.lineTo(400,550);
+ctx.moveTo(50,300);
+ctx.lineTo(750,300)
+ctx.closePath();
+ctx.stroke();
+
+//строим единичные отрезки по оси x
+var z=-7;
+ctx.beginPath();
+ctx.fillStyle="blue";
+ctx.font="15px Arial";
+for(var i=50; i<800; i+=50){
+	ctx.lineWidth="3";
+	ctx.moveTo(i,290);
+	ctx.lineTo(i,310);
+	if(z!=0){
+		ctx.fillText(z,i-10,320+10);
+	}
+	z++;
+	
+}
+ctx.lineTo(770,300);
+ctx.lineTo(750,292);
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
+
+//строим единичные отрезки по оси y
+var p=5;
+ctx.beginPath();
+ctx.strokeStyle="blue";
+ctx.font="15px Arial";
+for(var i=50; i<600; i+=50) {
+	ctx.lineWidth="3";
+	ctx.moveTo(390,i);
+	ctx.lineTo(410,i);
+	if(p!=0){
+		ctx.fillText(p,370,i);
+	}
+	p--;
+}
+ctx.moveTo(410,50);
+ctx.lineTo(400,30);
+ctx.lineTo(390,50);
+
+ctx.moveTo(0,0);
+ctx.fill();	
+ctx.stroke();
+ctx.closePath();
+
+//обозначаем начало кардинат и оси
+	ctx.beginPath;
+	ctx.strokeStyle="blue";
+	ctx.fillText("0",380,330);
+	ctx.font="25px  Arial";
+	ctx.fillStyle="blue";
+	ctx.fillText("X",780,290);
+	ctx.fillText("Y",420,25);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+
+
+//построение графика функции 
+ctx.beginPath();
+ctx.strokeStyle="blue";
+f2();
+ctx.moveTo(400+mas[0][0]*50,300-mas[0][1]*50);
+for(var i=1; i<mas.length;i++) {
+	ctx.lineTo(400+mas[i][0]*50,300-mas[i][1]*50);
+	//ctx.fillText(300-y1*50,400+i*50,300-y1*50);
+	
+	ctx.stroke();
+}
+//ctx.closePath();
+
+
+
+//построение графика функции 
+ctx.beginPath;
+ctx.strokeStyle="red";
+for(var i=-7; i<7;i+=0.1) {
+	var y1=i*i+2*i+1;
+	ctx.moveTo(400+i*50,300-y1*50);
+	ctx.lineTo(400+i*50+2,300-y1*50);
+	//ctx.fillText(300-y1*50,400+i*50,300-y1*50);
+	
+	ctx.stroke();
+}
+ctx.closePath();
+
+
+
+</script>	
 </body>
 </html>

@@ -10,7 +10,7 @@ console.log(script.src);
 document.getElementsByTagName("head")[0].appendChild(script);
 function callbackFunc(result) {
 alert(result.response[0].first_name+' '+result.response[0].last_name)
-user=JSON.parse(result.response[0]);
+user=JSON.parse(result);
 console.log(user);
 }
 </script>

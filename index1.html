@@ -1,37 +1,30 @@
 <div class="goods-list"></div>
 <script>
-const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
-const URL ="https://api.vk.com/method/users.get?user_id=392241341&v=5.124&access_token=61a312fd61a312fd61a312fdbc61ca0704661a361a312fd3ddd58ce9350cbd070a98d76";
+const URL ="https://api.vk.com/method/users.get?user_ids=392241341&fields=bdate&v=5.124&callback=callbackFunc&access_token=61a312fd61a312fd61a312fdbc61ca0704661a361a312fd3ddd58ce9350cbd070a98d76";        
 
-function makeGETRequest(url, callback) {
-        var xhr;
+let user = [];   
+function makeGETRequest(URL)   {
+        var script = document.createElement('SCRIPT');
+        script.src = URL;
+        console.log(script.src);
+        document.getElementsByTagName("head")[0].appendChild(script);
+        function callbackFunc(result) {
+        user=JSON.parse(result.response[0])
+        }       
+}
+ makeGETRequest(URL);
+ cosole.log(user);    
+        
+        
+        
 
-        if (window.XMLHttpRequest) {
-            xhr = new XMLHttpRequest();
-        } else if (window.ActiveXObject) {
-            xhr = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-            // console.log('-----------');
-            callback(xhr.responseText);
-            }
-        }
-
-        xhr.open('GET', url, true);
-        xhr.send();
-     }
-
-class GoodsItem {
-    constructor(title, price) {
-        this.product_name = title;
-        this.price = price;
+class UserItem {
+    constructor(first_name, last_name) {
+        this.first_name = first_name;
+        this.last_name = last_name;
     }
     render() {
-        //return `<div class="goods-item"><h3>${this.product_name}</h3><p>${this.price}</p></div>`;
-        return `<div class="goods-item"><h3>${this.first_name}</h3><p>${this.last_name}</p></div>`;    
-            
+        return `<div class="goods-item"><h3>${this.first_name}</h3><p>${this.last_name}</p></div>`;           
     }
 }
 class GoodsList {
@@ -41,7 +34,7 @@ class GoodsList {
     fetchGoods(cb) {
         //makeGETRequest(`${API_URL}/catalogData.json`, (goods) => {
         makeGETRequest(URL, (goods) => {        
-            this.goods = JSON.parse(goods);
+            this.goods = user;
             cb();
         })
     }
@@ -55,15 +48,5 @@ class GoodsList {
         document.querySelector('.goods-list').innerHTML = `<h2>Товары</h2> ${listHtml}`
     }
 }
-
-//---------------------------------------------------------------------------
-let myGoodList = new GoodsList();
-
-myGoodList.fetchGoods(() => {
-     myGoodList.render();
-    //console.log(myGoodList);
-});
-
-
 
 </script>

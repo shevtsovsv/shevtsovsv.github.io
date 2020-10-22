@@ -1,49 +1,63 @@
+<html>
+<title>JSONP</title>
+<head></head>
+<body>
 <div class="goods-list"></div>
-<script>
-const URL ="https://api.vk.com/method/users.get?user_ids=392241341&fields=bdate&v=5.124&callback=callbackFunc&access_token=61a312fd61a312fd61a312fdbc61ca0704661a361a312fd3ddd58ce9350cbd070a98d76";        
+<input type="button" value="Ok" onclick="f1()">
+<script type="text/javascript">
+    var user = [];
+    var script = document.createElement('SCRIPT');
+    script.src = "https://api.vk.com/method/users.get?user_ids=392241341&fields=bdate&v=5.124&callback=callbackFunc&access_token=61a312fd61a312fd61a312fdbc61ca0704661a361a312fd3ddd58ce9350cbd070a98d76";
+    console.log(script.src);
+    document.getElementsByTagName("head")[0].appendChild(script);
+    function callbackFunc(result) {
+        user=result;
+        console.log(user);
+        alert(result.response[0].first_name+' '+result.response[0].last_name)  
+    }
 
-let user = [];   
-var script = document.createElement('SCRIPT');
-script.src = URL;
-console.log(script.src);
-document.getElementsByTagName("head")[0].appendChild(script);
-function callbackFunc(result) {
-        user=JSON.parse(result.response[0])
- }       
- console.log(user);    
-        
-        
-        
 
-class UserItem {
-    constructor(first_name, last_name) {
-        this.first_name = first_name;
-        this.last_name = last_name;
+    class GoodsItem {
+        constructor(first_name, last_name) {
+            this.first_name = first_name;
+            this.last_name = last_name;
+        }
+        render() {
+            return `<div class="goods-item"><h3>${this.first_name}</h3><p>${this.last_name}</p></div>`;                   
+        }
     }
-    render() {
-        return `<div class="goods-item"><h3>${this.first_name}</h3><p>${this.last_name}</p></div>`;           
-    }
-}
-class GoodsList {
-    constructor() {
-        this.goods = [];
-    }
-    fetchGoods(cb) {
-        //makeGETRequest(`${API_URL}/catalogData.json`, (goods) => {
-        makeGETRequest(URL, (goods) => {        
-            this.goods = user;
+
+    class GoodsList {
+        constructor(us=user) {
+            this.goods = [];
+            // this.user = us;
+        }
+        fetchGoods(cb) { 
+            this.goods = user.response;  
+           
+
             cb();
-        })
-    }
-    render() {
-        let listHtml = '';
-        this.goods.forEach(good => {
-            //const goodItem = new GoodsItem(good.product_name, good.price);
-            const goodItem = new GoodsItem(good.first_name, good.last_name);    
-            listHtml += goodItem.render();
-        });
-        document.querySelector('.goods-list').innerHTML = `<h2>Товары</h2> ${listHtml}`
-    }
-}
+        }
 
+        render() {
+            let listHtml = '';
+            console.log(this.goods);
+            console.log(this.goods.first_name);
+            this.goods.forEach(good => {
+                    const goodItem = new GoodsItem(good.first_name, good.last_name);    
+                    listHtml += goodItem.render();
+                });
+            document.querySelector('.goods-list').innerHTML = `<h2>Пользователи</h2> ${listHtml}`
+            }
+    }
+function f1() {
+    let myGoodList = new GoodsList();
+
+    myGoodList.fetchGoods(() => {
+        myGoodList.render();
+    })
+}
+    
 </script>
+</body>
+</html>

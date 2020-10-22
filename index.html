@@ -1,3 +1,4 @@
+<script>
 const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 function makeGETRequest(url, callback) {
@@ -47,27 +48,15 @@ class GoodsList {
         });
         document.querySelector('.goods-list').innerHTML = `<h2>Товары</h2> ${listHtml}`
     }
-
-    calculateTotalCost () {
-        let totalCost=0;
-        this.goods.forEach((good) =>{
-            console.log(good.price);
-            totalCost += good.price;
-        });
-        console.log(totalCost);
-    }
 }
 
 //---------------------------------------------------------------------------
 let myGoodList = new GoodsList();
 
 myGoodList.fetchGoods(() => {
-    myGoodList.render();
+    console.log(myGoodList);
 });
-// console.log(myGoodList);
 
 
 
-myGoodList.calculateTotalCost()
-
-//--------------------------------------------------------------------------
+</script>

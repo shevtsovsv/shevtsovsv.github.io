@@ -3,16 +3,13 @@
 const URL ="https://api.vk.com/method/users.get?user_ids=392241341&fields=bdate&v=5.124&callback=callbackFunc&access_token=61a312fd61a312fd61a312fdbc61ca0704661a361a312fd3ddd58ce9350cbd070a98d76";        
 
 let user = [];   
-function makeGETRequest(URL)   {
-        var script = document.createElement('SCRIPT');
-        script.src = URL;
-        console.log(script.src);
-        document.getElementsByTagName("head")[0].appendChild(script);
-        function callbackFunc(result) {
+var script = document.createElement('SCRIPT');
+script.src = URL;
+console.log(script.src);
+document.getElementsByTagName("head")[0].appendChild(script);
+function callbackFunc(result) {
         user=JSON.parse(result.response[0])
-        }       
-}
- makeGETRequest(URL);
+ }       
  console.log(user);    
         
         

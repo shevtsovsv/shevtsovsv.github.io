@@ -3,12 +3,15 @@
 <head></head>
 <body>
 <script type="text/javascript">
+let user = [];
 var script = document.createElement('SCRIPT');
 script.src = "https://api.vk.com/method/users.get?user_ids=392241341&fields=bdate&v=5.124&callback=callbackFunc&access_token=61a312fd61a312fd61a312fdbc61ca0704661a361a312fd3ddd58ce9350cbd070a98d76";
 console.log(script.src);
 document.getElementsByTagName("head")[0].appendChild(script);
 function callbackFunc(result) {
 alert(result.response[0].first_name+' '+result.response[0].last_name)
+user=JSON.parse(result.response[0]);
+console.log(user);
 }
 </script>
 </body>

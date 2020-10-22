@@ -1,6 +1,7 @@
 <div class="goods-list"></div>
 <script>
 const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+const URL ="https://api.vk.com/method/users.get?user_id=392241341&v=5.124&access_token=61a312fd61a312fd61a312fdbc61ca0704661a361a312fd3ddd58ce9350cbd070a98d76";
 
 function makeGETRequest(url, callback) {
         var xhr;
@@ -28,7 +29,9 @@ class GoodsItem {
         this.price = price;
     }
     render() {
-        return `<div class="goods-item"><h3>${this.product_name}</h3><p>${this.price}</p></div>`;
+        //return `<div class="goods-item"><h3>${this.product_name}</h3><p>${this.price}</p></div>`;
+        return `<div class="goods-item"><h3>${this.first_name}</h3><p>${this.last_name}</p></div>`;    
+            
     }
 }
 class GoodsList {
@@ -36,7 +39,8 @@ class GoodsList {
         this.goods = [];
     }
     fetchGoods(cb) {
-        makeGETRequest(`${API_URL}/catalogData.json`, (goods) => {
+        //makeGETRequest(`${API_URL}/catalogData.json`, (goods) => {
+        makeGETRequest(URL, (goods) => {        
             this.goods = JSON.parse(goods);
             cb();
         })
@@ -44,7 +48,8 @@ class GoodsList {
     render() {
         let listHtml = '';
         this.goods.forEach(good => {
-            const goodItem = new GoodsItem(good.product_name, good.price);
+            //const goodItem = new GoodsItem(good.product_name, good.price);
+            const goodItem = new GoodsItem(good.first_name, good.last_name);    
             listHtml += goodItem.render();
         });
         document.querySelector('.goods-list').innerHTML = `<h2>Товары</h2> ${listHtml}`

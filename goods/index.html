@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script defer src="./indexVueCart.js"></script>
+    <!-- <script defer src="./script/fastfood.js"></script> -->
+    <link href="./style/style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="app">
+        <input type="text" class="inputText" v-model="filterText">        
+        <input type="button" class="cartButton" value="Show cart" @click="showBasket = !showBasket">
+        <div class="shopGoods">
+            <div class="itemsGoods" v-for="index in fGoods">            
+                <h3 class="name">{{index.title}}</h3>
+                <p class="price">{{index.price}}</p>
+                <input type="button" class="addToCart" value="add to cart" @click="addToBasket(index)">            
+            </div>
+        </div>
+        <div class="cart">Total cost {{totalCost}}</div>
+        <div class="basketApeareence" v-if="showBasket">
+            <div class="basket" v-for="index in basket">
+                <div class="basketName">{{index.title}}</div>
+                <div class="basketPrice">{{index.price}}</div>
+                <div class="quantity">{{index.q}}</div>
+                <button class="removeButton" @click="removeFromBasket(index.id_product)">delete</button>
+                <div>{{index.id_product}}</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

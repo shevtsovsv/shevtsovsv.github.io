@@ -1,0 +1,50 @@
+[
+    {
+      "Athour": "Pushkin",
+      "name": "Moroz",
+      "price":200,
+      "quantity": 3
+    },
+    {
+      "Athour": "Pushkin",
+      "name": "Solnce",
+      "price":300,
+      "quantity": 5
+    },
+    {
+        "Athour": "Pushkin",
+      "name": "Den",
+      "price":100,
+      "quantity": 2
+    },
+    {
+       "Athour": "Perumov",
+      "name": "Almaznii i derevyanii mech",
+      "price":300,
+      "quantity": 4
+      },
+      {
+        "Athour": "Perumov",
+      "name": "novie bogi",
+      "price":500,
+      "quantity": 3
+      },
+      {
+        "Athour": "Perumov",
+      "name": "Text",
+      "price":500,
+      "quantity": 6
+      },
+      {
+        "Athour": "Strugatskie",
+      "name": "Peknik",
+      "price": 1000,
+      "quantity": 10
+      },
+      {
+         "Athour": "Strugatskie",
+      "name": "Ponedelnik",
+      "price": 700,
+      "quantity": 7
+      }
+  ]

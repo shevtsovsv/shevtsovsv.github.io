@@ -1,0 +1,50 @@
+[
+    {
+      "type": "медицина",
+      "spend_name": "Ношпа",
+      "price":200,
+      "quantity": 3
+    },
+    {
+      "type": "медицина",
+      "spend_name": "бинты",
+      "price":50,
+      "quantity": 5
+    },
+    {
+        "type": "медицина",
+        "spend_name": "пластырь",
+        "price":100,
+        "quantity": 2
+    },
+    {
+        "type": "авто",
+        "spend_name": "Бензин",
+        "price":30,
+        "quantity": 40
+      },
+      {
+        "type": "авто",
+        "spend_name": "масло",
+        "price":500,
+        "quantity": 1
+      },
+      {
+        "type": "дом",
+        "spend_name": "розетка",
+        "price":200,
+        "quantity": 3
+      },
+      {
+        "type": "дом",
+        "spend_name": "телевизор",
+        "price":5000,
+        "quantity": 1
+      },
+      {
+          "type": "дом",
+          "spend_name": "колонка",
+          "price":1000,
+          "quantity": 1
+      }
+  ]

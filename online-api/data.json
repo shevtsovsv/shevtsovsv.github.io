@@ -1,0 +1,10 @@
+[
+    {"name": "Motorola Edge+ 256 GB", "prise": 124990, "file_name":"motorola.png"},
+    {"name": "POCO X3 6 GB/128 GB - Plavi", "prise": 27990, "file_name":"roco.png"},
+    {"name": "iPhone 12 - 64 GB - Blue", "prise": 111390, "file_name":"iphone12.png"},
+    {"name": "Alcatel 1SE 64 GB - Sivi", "prise": 14990, "file_name":"alcatel1.png"},
+    {"name": "Nokia 3.2 - Crni", "prise":15990, "file_name":"nokia.png" },
+    {"name": "Honor 20 - Plavi", "prise": 42990, "file_name":"honor.png" },
+    {"name": "ROKiT iO Pro 3D - Crni", "prise": 13990, "file_name":"rokit.png"},
+    {"name": "Alcatel 1C DS - Crni", "prise": 6990, "file_name":"alcatel.png"}
+]

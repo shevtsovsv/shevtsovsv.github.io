@@ -1,0 +1,170 @@
+[
+  {
+    "Surname": "Иванов",
+    "name": "Петр",
+    "gender": "Муж",
+    "height": 170,
+    "klass": 5,
+    "inschool": true
+  },
+  {
+    "Surname": "Смирнова",
+    "name": "Анна",
+    "gender": "Жен",
+    "height": 160,
+    "klass": 6,
+    "inschool": true
+  },
+  {
+    "Surname": "Brown",
+    "name": "James",
+    "gender": "Муж",
+    "height": 175,
+    "klass": 7,
+    "inschool": true
+  },
+  {
+    "Surname": "Кузнецов",
+    "name": "Алексей",
+    "gender": "Муж",
+    "height": 168,
+    "klass": 5,
+    "inschool": false
+  },
+  {
+    "Surname": "Taylor",
+    "name": "Emily",
+    "gender": "Жен",
+    "height": 162,
+    "klass": 6,
+    "inschool": true
+  },
+  {
+    "Surname": "Попов",
+    "name": "Дмитрий",
+    "gender": "Муж",
+    "height": 172,
+    "klass": 7,
+    "inschool": true
+  },
+  {
+    "Surname": "Wilson",
+    "name": "Olivia",
+    "gender": "Жен",
+    "height": 158,
+    "klass": 5,
+    "inschool": true
+  },
+  {
+    "Surname": "Васильев",
+    "name": "Максим",
+    "gender": "Муж",
+    "height": 169,
+    "klass": 6,
+    "inschool": true
+  },
+  {
+    "Surname": "Thomas",
+    "name": "Ethan",
+    "gender": "Муж",
+    "height": 171,
+    "klass": 7,
+    "inschool": false
+  },
+  {
+    "Surname": "Новикова",
+    "name": "Екатерина",
+    "gender": "Жен",
+    "height": 159,
+    "klass": 5,
+    "inschool": true
+  },
+  {
+    "Surname": "Davies",
+    "name": "Jack",
+    "gender": "Муж",
+    "height": 174,
+    "klass": 7,
+    "inschool": true
+  },
+  {
+    "Surname": "Фролова",
+    "name": "Марина",
+    "gender": "Жен",
+    "height": 161,
+    "klass": 6,
+    "inschool": true
+  },
+  {
+    "Surname": "Evans",
+    "name": "Sophia",
+    "gender": "Жен",
+    "height": 163,
+    "klass": 5,
+    "inschool": true
+  },
+  {
+    "Surname": "Морозов",
+    "name": "Виктор",
+    "gender": "Муж",
+    "height": 176,
+    "klass": 7,
+    "inschool": true
+  },
+  {
+    "Surname": "Walker",
+    "name": "Mia",
+    "gender": "Жен",
+    "height": 157,
+    "klass": 6,
+    "inschool": false
+  },
+  {
+    "Surname": "Зайцев",
+    "name": "Олег",
+    "gender": "Муж",
+    "height": 172,
+    "klass": 5,
+    "inschool": true
+  },
+  {
+    "Surname": "Robinson",
+    "name": "Noah",
+    "gender": "Муж",
+    "height": 170,
+    "klass": 6,
+    "inschool": true
+  },
+  {
+    "Surname": "Лебедева",
+    "name": "Светлана",
+    "gender": "Жен",
+    "height": 160,
+    "klass": 7,
+    "inschool": true
+  },
+  {
+    "Surname": "White",
+    "name": "Lucas",
+    "gender": "Муж",
+    "height": 174,
+    "klass": 5,
+    "inschool": false
+  },
+  {
+    "Surname": "Гаврилов",
+    "name": "Егор",
+    "gender": "Муж",
+    "height": 169,
+    "klass": 6,
+    "inschool": true
+  },
+  {
+    "Surname": "Harris",
+    "name": "Ella",
+    "gender": "Жен",
+    "height": 158,
+    "klass": 7,
+    "inschool": true
+  }
+]

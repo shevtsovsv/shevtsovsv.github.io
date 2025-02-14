@@ -1,0 +1,1367 @@
+[
+  {
+    "name": "Австрия",
+    "сapital": "Вена",
+    "area": 83858,
+    "population": 8741753,
+    "continent": "Европа"
+  },
+  {
+    "name": "Азербайджан",
+    "сapital": "Баку",
+    "area": 86600,
+    "population": 9705600,
+    "continent": "Азия"
+  },
+  {
+    "name": "Албания",
+    "сapital": "Тирана",
+    "area": 28748,
+    "population": 2866026,
+    "continent": "Европа"
+  },
+  {
+    "name": "Алжир",
+    "сapital": "Алжир",
+    "area": 2381740,
+    "population": 39813722,
+    "continent": "Африка"
+  },
+  {
+    "name": "Ангола",
+    "сapital": "Луанда",
+    "area": 1246700,
+    "population": 25831000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Андорра",
+    "сapital": "Андорра-ла-Велья",
+    "area": 468,
+    "population": 78014,
+    "continent": "Европа"
+  },
+  {
+    "name": "Антигуа и Барбуда",
+    "сapital": "Сент-Джонс",
+    "area": 442,
+    "population": 93581,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Аргентина",
+    "сapital": "Буэнос-Айрес",
+    "area": 2766890,
+    "population": 43847000,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "Армения",
+    "сapital": "Ереван",
+    "area": 29741,
+    "population": 2995100,
+    "continent": "Азия"
+  },
+  {
+    "name": "Афганистан",
+    "сapital": "Кабул",
+    "area": 647500,
+    "population": 29822848,
+    "continent": "Азия"
+  },
+  {
+    "name": "Багамские Острова",
+    "сapital": "Нассау",
+    "area": 13940,
+    "population": 393000,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Бангладеш",
+    "сapital": "Дакка",
+    "area": 144000,
+    "population": 160221000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Барбадос",
+    "сapital": "Бриджтаун",
+    "area": 430,
+    "population": 291495,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Бахрейн",
+    "сapital": "Манама",
+    "area": 701,
+    "population": 1397000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Белиз",
+    "сapital": "Бельмопан",
+    "area": 22966,
+    "population": 377968,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Белоруссия",
+    "сapital": "Минск",
+    "area": 207595,
+    "population": 9498400,
+    "continent": "Европа"
+  },
+  {
+    "name": "Бельгия",
+    "сapital": "Брюссель",
+    "area": 30528,
+    "population": 11250585,
+    "continent": "Европа"
+  },
+  {
+    "name": "Бенин",
+    "сapital": "Порто-Ново",
+    "area": 112620,
+    "population": 11167000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Болгария",
+    "сapital": "София",
+    "area": 110910,
+    "population": 7153784,
+    "continent": "Европа"
+  },
+  {
+    "name": "Боливия",
+    "сapital": "Сукре",
+    "area": 1098580,
+    "population": 10985059,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "Босния и Герцеговина",
+    "сapital": "Сараево",
+    "area": 51129,
+    "population": 3802000,
+    "continent": "Европа"
+  },
+  {
+    "name": "Ботсвана",
+    "сapital": "Габороне",
+    "area": 600370,
+    "population": 2209208,
+    "continent": "Африка"
+  },
+  {
+    "name": "Бразилия",
+    "сapital": "Бразилиа",
+    "area": 8511965,
+    "population": 206081432,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "Бруней",
+    "сapital": "Бандар-Сери-Бегаван",
+    "area": 5770,
+    "population": 436620,
+    "continent": "Азия"
+  },
+  {
+    "name": "Буркина-Фасо",
+    "сapital": "Уагадугу",
+    "area": 274200,
+    "population": 19034397,
+    "continent": "Африка"
+  },
+  {
+    "name": "Бурунди",
+    "сapital": "Гитега",
+    "area": 27830,
+    "population": 11099298,
+    "continent": "Африка"
+  },
+  {
+    "name": "Бутан",
+    "сapital": "Тхимпху",
+    "area": 47000,
+    "population": 784000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Вануату",
+    "сapital": "Порт-Вила",
+    "area": 12200,
+    "population": 289700,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Ватикан",
+    "сapital": "Ватикан",
+    "area": "0.44",
+    "population": 842,
+    "continent": "Европа"
+  },
+  {
+    "name": "Великобритания",
+    "сapital": "Лондон",
+    "area": 244820,
+    "population": 65341183,
+    "continent": "Европа"
+  },
+  {
+    "name": "Венгрия",
+    "сapital": "Будапешт",
+    "area": 93030,
+    "population": 9830485,
+    "continent": "Европа"
+  },
+  {
+    "name": "Венесуэла",
+    "сapital": "Каракас",
+    "area": 912050,
+    "population": 31028637,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "Восточный Тимор",
+    "сapital": "Дили",
+    "area": 14874,
+    "population": 1167242,
+    "continent": "Азия"
+  },
+  {
+    "name": "Вьетнам",
+    "сapital": "Ханой",
+    "area": 329560,
+    "population": 91713300,
+    "continent": "Азия"
+  },
+  {
+    "name": "Габон",
+    "сapital": "Либревиль",
+    "area": 267667,
+    "population": 1811079,
+    "continent": "Африка"
+  },
+  {
+    "name": "Гаити",
+    "сapital": "Порт-о-Пренс",
+    "area": 27750,
+    "population": 10911819,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Гайана",
+    "сapital": "Джорджтаун",
+    "area": 214970,
+    "population": 741962,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "Гамбия",
+    "сapital": "Банжул",
+    "area": 11300,
+    "population": 2025527,
+    "continent": "Африка"
+  },
+  {
+    "name": "Гана",
+    "сapital": "Аккра",
+    "area": 238540,
+    "population": 28308301,
+    "continent": "Африка"
+  },
+  {
+    "name": "Гватемала",
+    "сapital": "Гватемала",
+    "area": 108890,
+    "population": 16555556,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Гвинея",
+    "сapital": "Конакри",
+    "area": 245857,
+    "population": 10628972,
+    "continent": "Африка"
+  },
+  {
+    "name": "Гвинея-Бисау",
+    "сapital": "Бисау",
+    "area": 36120,
+    "population": 1547754,
+    "continent": "Африка"
+  },
+  {
+    "name": "Германия",
+    "сapital": "Берлин",
+    "area": 357021,
+    "population": 82175684,
+    "continent": "Европа"
+  },
+  {
+    "name": "Гондурас",
+    "сapital": "Тегусигальпа",
+    "area": 112090,
+    "population": 8721014,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Государство Палестина",
+    "сapital": "Иерусалим (Рамалла)",
+    "area": 6020,
+    "population": 4816503,
+    "continent": "Азия"
+  },
+  {
+    "name": "Гренада",
+    "сapital": "Сент-Джорджес",
+    "area": 340,
+    "population": 110566,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Греция",
+    "сapital": "Афины",
+    "area": 131940,
+    "population": 10793526,
+    "continent": "Европа"
+  },
+  {
+    "name": "Грузия",
+    "сapital": "Тбилиси",
+    "area": 69700,
+    "population": 3720400,
+    "continent": "Азия"
+  },
+  {
+    "name": "Дания",
+    "сapital": "Копенгаген",
+    "area": 43094,
+    "population": 5707251,
+    "continent": "Европа"
+  },
+  {
+    "name": "Джибути",
+    "сapital": "Джибути",
+    "area": 22000,
+    "population": 890179,
+    "continent": "Африка"
+  },
+  {
+    "name": "Доминика",
+    "сapital": "Розо",
+    "area": 754,
+    "population": 69393,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Доминиканская Республика",
+    "сapital": "Санто-Доминго",
+    "area": 48730,
+    "population": 10075045,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "ДР Конго",
+    "сapital": "Киншаса",
+    "area": 2345410,
+    "population": 85026000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Египет",
+    "сapital": "Каир",
+    "area": 1001450,
+    "population": 91701723,
+    "continent": "Африка"
+  },
+  {
+    "name": "Замбия",
+    "сapital": "Лусака",
+    "area": 752614,
+    "population": 16717000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Зимбабве",
+    "сapital": "Хараре",
+    "area": 390580,
+    "population": 15967000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Израиль",
+    "сapital": "Иерусалим",
+    "area": 22072,
+    "population": 8585000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Индия",
+    "сapital": "Нью-Дели",
+    "area": 3287590,
+    "population": 1268961000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Индонезия",
+    "сapital": "Джакарта",
+    "area": 1904556,
+    "population": 255461700,
+    "continent": "Азия"
+  },
+  {
+    "name": "Иордания",
+    "сapital": "Амман",
+    "area": 89400,
+    "population": 9813095,
+    "continent": "Азия"
+  },
+  {
+    "name": "Ирак",
+    "сapital": "Багдад",
+    "area": 437072,
+    "population": 37883543,
+    "continent": "Азия"
+  },
+  {
+    "name": "Иран",
+    "сapital": "Тегеран",
+    "area": 1648000,
+    "population": 80840713,
+    "continent": "Азия"
+  },
+  {
+    "name": "Ирландия",
+    "сapital": "Дублин",
+    "area": 70273,
+    "population": 4658530,
+    "continent": "Европа"
+  },
+  {
+    "name": "Исландия",
+    "сapital": "Рейкьявик",
+    "area": 103000,
+    "population": 332529,
+    "continent": "Европа"
+  },
+  {
+    "name": "Испания",
+    "сapital": "Мадрид",
+    "area": 497304,
+    "population": 46438422,
+    "continent": "Европа"
+  },
+  {
+    "name": "Италия",
+    "сapital": "Рим",
+    "area": 301340,
+    "population": 60665551,
+    "continent": "Европа"
+  },
+  {
+    "name": "Йемен",
+    "сapital": "Сана",
+    "area": 527970,
+    "population": 27478000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Кабо-Верде",
+    "сapital": "Прая",
+    "area": 4033,
+    "population": 538535,
+    "continent": "Африка"
+  },
+  {
+    "name": "Казахстан",
+    "сapital": "Нур-Султан",
+    "area": 2724900,
+    "population": 17753200,
+    "continent": "Азия"
+  },
+  {
+    "name": "Камбоджа",
+    "сapital": "Пномпень",
+    "area": 181040,
+    "population": 15827000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Камерун",
+    "сapital": "Яунде",
+    "area": 475440,
+    "population": 23924000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Канада",
+    "сapital": "Оттава",
+    "area": 9976139,
+    "population": 36286425,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Катар",
+    "сapital": "Доха",
+    "area": 11437,
+    "population": 2553393,
+    "continent": "Азия"
+  },
+  {
+    "name": "Кения",
+    "сapital": "Найроби",
+    "area": 582650,
+    "population": 44156577,
+    "continent": "Африка"
+  },
+  {
+    "name": "Кипр",
+    "сapital": "Никосия",
+    "area": 9250,
+    "population": 848319,
+    "continent": "Азия"
+  },
+  {
+    "name": "Киргизия",
+    "сapital": "Бишкек",
+    "area": 198500,
+    "population": 6019500,
+    "continent": "Азия"
+  },
+  {
+    "name": "Кирибати",
+    "сapital": "Южная Тарава",
+    "area": 717,
+    "population": 109693,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Китай",
+    "сapital": "Пекин",
+    "area": 9640821,
+    "population": 1410549741,
+    "continent": "Азия"
+  },
+  {
+    "name": "КНДР",
+    "сapital": "Пхеньян",
+    "area": 120540,
+    "population": 25281000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Колумбия",
+    "сapital": "Богота",
+    "area": 1138910,
+    "population": 48892070,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "Коморские Острова",
+    "сapital": "Морони",
+    "area": 2235,
+    "population": 806153,
+    "continent": "Африка"
+  },
+  {
+    "name": "Коста-Рика",
+    "сapital": "Сан-Хосе",
+    "area": 51100,
+    "population": 4890379,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Кот-д'Ивуар",
+    "сapital": "Ямусукро",
+    "area": 322460,
+    "population": 23254000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Куба",
+    "сapital": "Гавана",
+    "area": 110860,
+    "population": 11236348,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Кувейт",
+    "сapital": "Эль-Кувейт",
+    "area": 17820,
+    "population": 4330308,
+    "continent": "Азия"
+  },
+  {
+    "name": "Лаос",
+    "сapital": "Вьентьян",
+    "area": 236800,
+    "population": 6492400,
+    "continent": "Азия"
+  },
+  {
+    "name": "Латвия",
+    "сapital": "Рига",
+    "area": 64589,
+    "population": 1968957,
+    "continent": "Европа"
+  },
+  {
+    "name": "Лесото",
+    "сapital": "Масеру",
+    "area": 30355,
+    "population": 2160000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Либерия",
+    "сapital": "Монровия",
+    "area": 111370,
+    "population": 4001855,
+    "continent": "Африка"
+  },
+  {
+    "name": "Ливан",
+    "сapital": "Бейрут",
+    "area": 10452,
+    "population": 5988000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Ливия",
+    "сapital": "Триполи",
+    "area": 1759540,
+    "population": 6244174,
+    "continent": "Африка"
+  },
+  {
+    "name": "Литва",
+    "сapital": "Вильнюс",
+    "area": 65200,
+    "population": 2888558,
+    "continent": "Европа"
+  },
+  {
+    "name": "Лихтенштейн",
+    "сapital": "Вадуц",
+    "area": 160,
+    "population": 37662,
+    "continent": "Европа"
+  },
+  {
+    "name": "Люксембург",
+    "сapital": "Люксембург",
+    "area": 2586,
+    "population": 576249,
+    "continent": "Европа"
+  },
+  {
+    "name": "Маврикий",
+    "сapital": "Порт-Луи",
+    "area": 2040,
+    "population": 1263747,
+    "continent": "Африка"
+  },
+  {
+    "name": "Мавритания",
+    "сapital": "Нуакшот",
+    "area": 1030700,
+    "population": 3537368,
+    "continent": "Африка"
+  },
+  {
+    "name": "Мадагаскар",
+    "сapital": "Антананариву",
+    "area": 587040,
+    "population": 24430325,
+    "continent": "Африка"
+  },
+  {
+    "name": "Малави",
+    "сapital": "Лилонгве",
+    "area": 118480,
+    "population": 17377468,
+    "continent": "Африка"
+  },
+  {
+    "name": "Малайзия",
+    "сapital": "Куала-Лумпур",
+    "area": 329750,
+    "population": 31790277,
+    "continent": "Азия"
+  },
+  {
+    "name": "Мали",
+    "сapital": "Бамако",
+    "area": 1240000,
+    "population": 18135000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Мальдивские Острова",
+    "сapital": "Мале",
+    "area": 300,
+    "population": 402071,
+    "continent": "Азия"
+  },
+  {
+    "name": "Мальта",
+    "сapital": "Валлетта",
+    "area": 316,
+    "population": 434403,
+    "continent": "Европа"
+  },
+  {
+    "name": "Марокко",
+    "сapital": "Рабат",
+    "area": 446550,
+    "population": 34817000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Маршалловы Острова",
+    "сapital": "Маджуро",
+    "area": 181,
+    "population": 55717,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Мексика",
+    "сapital": "Мехико",
+    "area": 1972550,
+    "population": 122273473,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Мозамбик",
+    "сapital": "Мапуту",
+    "area": 801590,
+    "population": 26423623,
+    "continent": "Африка"
+  },
+  {
+    "name": "Молдавия",
+    "сapital": "Кишинёв",
+    "area": 33846,
+    "population": 3553056,
+    "continent": "Европа"
+  },
+  {
+    "name": "Монако",
+    "сapital": "Монако",
+    "area": "2022/02/02",
+    "population": 38400,
+    "continent": "Европа"
+  },
+  {
+    "name": "Монголия",
+    "сapital": "Улан-Батор",
+    "area": 1564116,
+    "population": 3081677,
+    "continent": "Азия"
+  },
+  {
+    "name": "Мьянма",
+    "сapital": "Нейпьидо",
+    "area": 678500,
+    "population": 51419420,
+    "continent": "Азия"
+  },
+  {
+    "name": "Намибия",
+    "сapital": "Виндхук",
+    "area": 825418,
+    "population": 2436469,
+    "continent": "Африка"
+  },
+  {
+    "name": "Науру",
+    "сapital": "[нет столицы]",
+    "area": "21.30",
+    "population": 10800,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Непал",
+    "сapital": "Катманду",
+    "area": 140800,
+    "population": 28431494,
+    "continent": "Азия"
+  },
+  {
+    "name": "Нигер",
+    "сapital": "Ниамей",
+    "area": 1267000,
+    "population": 20715000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Нигерия",
+    "сapital": "Абуджа",
+    "area": 923768,
+    "population": 186988000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Нидерланды",
+    "сapital": "Амстердам",
+    "area": 41526,
+    "population": 16979120,
+    "continent": "Европа"
+  },
+  {
+    "name": "Никарагуа",
+    "сapital": "Манагуа",
+    "area": 129494,
+    "population": 6262703,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Новая Зеландия",
+    "сapital": "Веллингтон",
+    "area": 268680,
+    "population": 4722321,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Норвегия",
+    "сapital": "Осло",
+    "area": 385186,
+    "population": 5213985,
+    "continent": "Европа"
+  },
+  {
+    "name": "ОАЭ",
+    "сapital": "Абу-Даби",
+    "area": 82880,
+    "population": 9267000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Оман",
+    "сapital": "Маскат",
+    "area": 309500,
+    "population": 4523401,
+    "continent": "Азия"
+  },
+  {
+    "name": "Пакистан",
+    "сapital": "Исламабад",
+    "area": 881913,
+    "population": 196174380,
+    "continent": "Азия"
+  },
+  {
+    "name": "Палау",
+    "сapital": "Нгерулмуд",
+    "area": 458,
+    "population": 17661,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Панама",
+    "сapital": "Панама",
+    "area": 78200,
+    "population": 4037043,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Папуа - Новая Гвинея",
+    "сapital": "Порт-Морсби",
+    "area": 463840,
+    "population": 8151300,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Парагвай",
+    "сapital": "Асунсьон",
+    "area": 406750,
+    "population": 6854536,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "Перу",
+    "сapital": "Лима",
+    "area": 1285220,
+    "population": 31488625,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "Польша",
+    "сapital": "Варшава",
+    "area": 312685,
+    "population": 37967209,
+    "continent": "Европа"
+  },
+  {
+    "name": "Португалия",
+    "сapital": "Лиссабон",
+    "area": 92082,
+    "population": 10341330,
+    "continent": "Европа"
+  },
+  {
+    "name": "Республика Конго",
+    "сapital": "Браззавиль",
+    "area": 342000,
+    "population": 4741000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Республика Корея",
+    "сapital": "Сеул",
+    "area": 98480,
+    "population": 51664244,
+    "continent": "Азия"
+  },
+  {
+    "name": "Россия",
+    "сapital": "Москва",
+    "area": 17125443,
+    "population": 146267288,
+    "continent": "Европа"
+  },
+  {
+    "name": "Руанда",
+    "сapital": "Кигали",
+    "area": 26338,
+    "population": 11533446,
+    "continent": "Африка"
+  },
+  {
+    "name": "Румыния",
+    "сapital": "Бухарест",
+    "area": 237500,
+    "population": 19759968,
+    "continent": "Европа"
+  },
+  {
+    "name": "Сальвадор",
+    "сapital": "Сан-Сальвадор",
+    "area": 21040,
+    "population": 6460271,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Самоа",
+    "сapital": "Апиа",
+    "area": 2860,
+    "population": 194899,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Сан-Марино",
+    "сapital": "Сан-Марино",
+    "area": "61.00",
+    "population": 33005,
+    "continent": "Европа"
+  },
+  {
+    "name": "Сан-Томе и Принсипи",
+    "сapital": "Сан-Томе",
+    "area": 1001,
+    "population": 194000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Саудовская Аравия",
+    "сapital": "Эр-Рияд",
+    "area": 2218000,
+    "population": 31015999,
+    "continent": "Азия"
+  },
+  {
+    "name": "Северная Македония",
+    "сapital": "Скопье",
+    "area": 25333,
+    "population": 2071278,
+    "continent": "Европа"
+  },
+  {
+    "name": "Сейшельские Острова",
+    "сapital": "Виктория",
+    "area": 455,
+    "population": 93186,
+    "continent": "Африка"
+  },
+  {
+    "name": "Сенегал",
+    "сapital": "Дакар",
+    "area": 196190,
+    "population": 14799859,
+    "continent": "Африка"
+  },
+  {
+    "name": "Сент-Винсент и Гренадины",
+    "сapital": "Кингстаун",
+    "area": 389,
+    "population": 110255,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Сент-Китс и Невис",
+    "сapital": "Бастер",
+    "area": 261,
+    "population": 52329,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Сент-Люсия",
+    "сapital": "Кастри",
+    "area": 620,
+    "population": 172818,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Сербия",
+    "сapital": "Белград",
+    "area": 88361,
+    "population": 9846582,
+    "continent": "Европа"
+  },
+  {
+    "name": "Сингапур",
+    "сapital": "Сингапур",
+    "area": 714,
+    "population": 5607300,
+    "continent": "Азия"
+  },
+  {
+    "name": "Сирия",
+    "сapital": "Дамаск",
+    "area": 185180,
+    "population": 17185170,
+    "continent": "Азия"
+  },
+  {
+    "name": "Словакия",
+    "сapital": "Братислава",
+    "area": 48845,
+    "population": 5426252,
+    "continent": "Европа"
+  },
+  {
+    "name": "Словения",
+    "сapital": "Любляна",
+    "area": 20253,
+    "population": 2064188,
+    "continent": "Европа"
+  },
+  {
+    "name": "Соломоновы Острова",
+    "сapital": "Хониара",
+    "area": 28450,
+    "population": 651700,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Сомали",
+    "сapital": "Могадишо",
+    "area": 637657,
+    "population": 12316895,
+    "continent": "Африка"
+  },
+  {
+    "name": "Судан",
+    "сapital": "Хартум",
+    "area": 1886068,
+    "population": 41176000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Суринам",
+    "сapital": "Парамарибо",
+    "area": 163270,
+    "population": 558773,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "США",
+    "сapital": "Вашингтон",
+    "area": 9522057,
+    "population": 322762018,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Сьерра-Леоне",
+    "сapital": "Фритаун",
+    "area": 71740,
+    "population": 7075641,
+    "continent": "Африка"
+  },
+  {
+    "name": "Таджикистан",
+    "сapital": "Душанбе",
+    "area": 143100,
+    "population": 8551000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Таиланд",
+    "сapital": "Бангкок",
+    "area": 514000,
+    "population": 68147000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Танзания",
+    "сapital": "Додома",
+    "area": 948087,
+    "population": 50142938,
+    "continent": "Африка"
+  },
+  {
+    "name": "Того",
+    "сapital": "Ломе",
+    "area": 56785,
+    "population": 7143000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Тонга",
+    "сapital": "Нукуалофа",
+    "area": 748,
+    "population": 106440,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Тринидад и Тобаго",
+    "сapital": "Порт-оф-Спейн",
+    "area": 5128,
+    "population": 1349667,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Тувалу",
+    "сapital": "Фунафути",
+    "area": "26.00",
+    "population": 10782,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Тунис",
+    "сapital": "Тунис",
+    "area": 163610,
+    "population": 11154372,
+    "continent": "Африка"
+  },
+  {
+    "name": "Туркмения",
+    "сapital": "Ашхабад",
+    "area": 491200,
+    "population": 5439000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Турция",
+    "сapital": "Анкара",
+    "area": 780580,
+    "population": 78741053,
+    "continent": "Азия"
+  },
+  {
+    "name": "Уганда",
+    "сapital": "Кампала",
+    "area": 236040,
+    "population": 36860700,
+    "continent": "Африка"
+  },
+  {
+    "name": "Узбекистан",
+    "сapital": "Ташкент",
+    "area": 447400,
+    "population": 31807000,
+    "continent": "Азия"
+  },
+  {
+    "name": "Украина",
+    "сapital": "Киев",
+    "area": 576604,
+    "population": 42650186,
+    "continent": "Европа"
+  },
+  {
+    "name": "Уругвай",
+    "сapital": "Монтевидео",
+    "area": 176220,
+    "population": 3480222,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "Федеративные Штаты Микронезии",
+    "сapital": "Паликир",
+    "area": 702,
+    "population": 105681,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Фиджи",
+    "сapital": "Сува",
+    "area": 18270,
+    "population": 903207,
+    "continent": "Австралия и Океания"
+  },
+  {
+    "name": "Филиппины",
+    "сapital": "Манила",
+    "area": 300000,
+    "population": 102980480,
+    "continent": "Азия"
+  },
+  {
+    "name": "Финляндия",
+    "сapital": "Хельсинки",
+    "area": 337030,
+    "population": 5487308,
+    "continent": "Европа"
+  },
+  {
+    "name": "Франция",
+    "сapital": "Париж",
+    "area": 547030,
+    "population": 64513242,
+    "continent": "Европа"
+  },
+  {
+    "name": "Хорватия",
+    "сapital": "Загреб",
+    "area": 56542,
+    "population": 4190669,
+    "continent": "Европа"
+  },
+  {
+    "name": "ЦАР",
+    "сapital": "Банги",
+    "area": 622984,
+    "population": 5277959,
+    "continent": "Африка"
+  },
+  {
+    "name": "Чад",
+    "сapital": "Нджамена",
+    "area": 1284000,
+    "population": 14497000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Черногория",
+    "сapital": "Подгорица",
+    "area": 14026,
+    "population": 622218,
+    "continent": "Европа"
+  },
+  {
+    "name": "Чехия",
+    "сapital": "Прага",
+    "area": 78866,
+    "population": 10553843,
+    "continent": "Европа"
+  },
+  {
+    "name": "Чили",
+    "сapital": "Сантьяго",
+    "area": 756950,
+    "population": 18006407,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "Швейцария",
+    "сapital": "Берн",
+    "area": 41290,
+    "population": 8325194,
+    "continent": "Европа"
+  },
+  {
+    "name": "Швеция",
+    "сapital": "Стокгольм",
+    "area": 449964,
+    "population": 9851017,
+    "continent": "Европа"
+  },
+  {
+    "name": "Шри-Ланка",
+    "сapital": "Шри-Джаяварденепура-Котте",
+    "area": 65610,
+    "population": 21866445,
+    "continent": "Азия"
+  },
+  {
+    "name": "Эквадор",
+    "сapital": "Кито",
+    "area": 283560,
+    "population": 16599593,
+    "continent": "Южная Америка"
+  },
+  {
+    "name": "Экваториальная Гвинея",
+    "сapital": "Малабо",
+    "area": 28051,
+    "population": 1222442,
+    "continent": "Африка"
+  },
+  {
+    "name": "Эритрея",
+    "сapital": "Асмэра",
+    "area": 121320,
+    "population": 5352000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Эсватини",
+    "сapital": "Мбабане",
+    "area": 17363,
+    "population": 1419623,
+    "continent": "Африка"
+  },
+  {
+    "name": "Эстония",
+    "сapital": "Таллин",
+    "area": 45226,
+    "population": 1315944,
+    "continent": "Европа"
+  },
+  {
+    "name": "Эфиопия",
+    "сapital": "Аддис-Абеба",
+    "area": 1127127,
+    "population": 101853000,
+    "continent": "Африка"
+  },
+  {
+    "name": "ЮАР",
+    "сapital": "Претория",
+    "area": 1219912,
+    "population": 55908900,
+    "continent": "Африка"
+  },
+  {
+    "name": "Южная Осетия",
+    "сapital": "Цхинвал",
+    "area": 3900,
+    "population": 53532,
+    "continent": "Азия"
+  },
+  {
+    "name": "Южный Судан",
+    "сapital": "Джуба",
+    "area": 619745,
+    "population": 12733000,
+    "continent": "Африка"
+  },
+  {
+    "name": "Ямайка",
+    "сapital": "Кингстон",
+    "area": 10990,
+    "population": 2723000,
+    "continent": "Северная Америка"
+  },
+  {
+    "name": "Япония",
+    "сapital": "Токио",
+    "area": 377944,
+    "population": 127103388,
+    "continent": "Азия"
+  }
+]

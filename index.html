@@ -1,63 +1,973 @@
-<html>
-<title>JSONP</title>
-<head></head>
-<body>
-<div class="goods-list"></div>
-<input type="button" value="Ok" onclick="f1()">
-<script type="text/javascript">
-    var user = [];
-    var script = document.createElement('SCRIPT');
-    script.src = "https://api.vk.com/method/users.get?user_ids=392241341&fields=bdate&v=5.124&callback=callbackFunc&access_token=61a312fd61a312fd61a312fdbc61ca0704661a361a312fd3ddd58ce9350cbd070a98d76";
-    console.log(script.src);
-    document.getElementsByTagName("head")[0].appendChild(script);
-    function callbackFunc(result) {
-        user=result;
-        console.log(user);
-        alert(result.response[0].first_name+' '+result.response[0].last_name)  
-    }
-
-
-    class GoodsItem {
-        constructor(first_name, last_name) {
-            this.first_name = first_name;
-            this.last_name = last_name;
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishbone - Архитектурная студия</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Основные стили */
+        :root {
+            --primary-color: #2A2C2F;
+            --secondary-color: #F5F5F5;
+            --accent-color: #C8A97E;
+            --text-color: #1B1A1A;
+            --light-text: #7D7D7D;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
         }
-        render() {
-            return `<div class="goods-item"><h3>${this.first_name}</h3><p>${this.last_name}</p></div>`;                   
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-
-    class GoodsList {
-        constructor(us=user) {
-            this.goods = [];
-            // this.user = us;
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
-        fetchGoods(cb) { 
-            this.goods = user.response;  
-           
-
-            cb();
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-
-        render() {
-            let listHtml = '';
-            console.log(this.goods);
-            console.log(this.goods.first_name);
-            this.goods.forEach(good => {
-                    const goodItem = new GoodsItem(good.first_name, good.last_name);    
-                    listHtml += goodItem.render();
-                });
-            document.querySelector('.goods-list').innerHTML = `<h2>Пользователи</h2> ${listHtml}`
+        
+        .section-padding {
+            padding: 100px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+            border: none;
+            border-radius: 2px;
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #b8976b;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+        
+        .section-title {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .section-subtitle {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--light-text);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* Шапка */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 30px 0;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        header.scrolled .logo {
+            color: var(--text-color);
+        }
+        
+        .logo span {
+            color: var(--accent-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 40px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        header.scrolled nav ul li a {
+            color: var(--text-color);
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        header.scrolled .mobile-menu-btn {
+            color: var(--text-color);
+        }
+        
+        /* Герой секция */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+        }
+        
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+        
+        .hero-scroll {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .hero-scroll i {
+            margin-top: 10px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
             }
-    }
-function f1() {
-    let myGoodList = new GoodsList();
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        /* О нас секция */
+        .about {
+            background-color: var(--white);
+        }
+        
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-stats {
+            display: flex;
+            margin-top: 40px;
+            gap: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 40px;
+            font-weight: 600;
+            color: var(--accent-color);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--light-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Процесс секция */
+        .process {
+            background-color: var(--secondary-color);
+        }
+        
+        .process-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 80px;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        
+        .process-steps:before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #ddd;
+            z-index: 1;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            padding: 0 20px;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 auto 30px;
+        }
+        
+        .step-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .step-description {
+            color: var(--light-text);
+        }
+        
+        /* Проекты секция */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            height: 400px;
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 30px;
+            color: var(--white);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .project-card:hover .project-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+        
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .project-category {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+        
+        /* Команда секция */
+        .team {
+            background-color: var(--secondary-color);
+        }
+        
+        .team-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .team-member {
+            text-align: center;
+        }
+        
+        .member-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid var(--accent-color);
+        }
+        
+        .member-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .member-role {
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .member-social a {
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+        
+        .member-social a:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Отзывы секция */
+        .testimonials {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .testimonial-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-text {
+            font-size: 24px;
+            font-style: italic;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .testimonial-role {
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+        
+        /* Контакты секция */
+        .contact-container {
+            display: flex;
+            gap: 80px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Подвал */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        .footer-logo span {
+            color: var(--accent-color);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-social a {
+            color: var(--white);
+            font-size: 18px;
+            transition: var(--transition);
+        }
+        
+        .footer-social a:hover {
+            color: var(--accent-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .about-container, .contact-container {
+                flex-direction: column;
+                gap: 50px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                gap: 50px;
+            }
+            
+            .process-steps:before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">Wish<span>bone</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#projects">Проекты</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#process">Процесс</a></li>
+                    <li><a href="#team">Команда</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
-    myGoodList.fetchGoods(() => {
-        myGoodList.render();
-    })
-}
-    
-</script>
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Архитектура, которая вдохновляет</h1>
+                <p>Создаем уникальные пространства, сочетающие функциональность, эстетику и инновации. Наша команда превращает ваши идеи в реальность.</p>
+                <a href="#contact" class="btn">Обсудить проект</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Листайте вниз</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- О нас секция -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-text">
+                    <span class="section-subtitle">О нас</span>
+                    <h2 class="section-title">Создаем архитектуру будущего</h2>
+                    <p>Wishbone — это архитектурная студия, основанная в 2010 году. Мы специализируемся на создании инновационных архитектурных решений, которые сочетают в себе функциональность, эстетику и устойчивость.</p>
+                    <p>Наша команда состоит из опытных архитекторов, дизайнеров и инженеров, которые работают вместе над созданием пространств, улучшающих качество жизни людей.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Проектов</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Лет опыта</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">25</span>
+                            <span class="stat-label">Наград</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Наша студия">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Процесс секция -->
+    <section id="process" class="process section-padding">
+        <div class="container">
+            <div class="process-header">
+                <span class="section-subtitle">Наш процесс</span>
+                <h2 class="section-title">Как мы работаем</h2>
+                <p>Мы следуем четкому процессу, чтобы обеспечить высочайшее качество на каждом этапе работы над проектом.</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Консультация</h3>
+                    <p class="step-description">Обсуждаем ваши потребности, цели и бюджет проекта.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Концепция</h3>
+                    <p class="step-description">Разрабатываем первоначальные идеи и концепции дизайна.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Планирование</h3>
+                    <p class="step-description">Создаем детальные планы и технические чертежи.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Реализация</h3>
+                    <p class="step-description">Координируем строительство и следим за качеством.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проекты секция -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="process-header">
+                <span class="section-subtitle">Наши работы</span>
+                <h2 class="section-title">Избранные проекты</h2>
+                <p>Взгляните на некоторые из наших последних проектов, которые демонстрируют наш подход к архитектуре и дизайну.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Современный дом" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Современный дом в пригороде</h3>
+                        <div class="project-category">Жилая архитектура</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Офисное здание" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Офисный комплекс "Горизонт"</h3>
+                        <div class="project-category">Коммерческая архитектура</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Ресторан" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Ресторан "У моря"</h3>
+                        <div class="project-category">Общественные пространства</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1571624436279-b272aff752b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Загородный дом" class="project-image">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Загородный дом "Сосны"</h3>
+                        <div class="project-category">Жилая архитектура</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Команда секция -->
+    <section id="team" class="team section-padding">
+        <div class="container">
+            <div class="team-header">
+                <span class="section-subtitle">Наша команда</span>
+                <h2 class="section-title">Профессионалы с страстью к архитектуре</h2>
+                <p>Наша команда состоит из талантливых архитекторов и дизайнеров, которые разделяют общее видение создания инновационных пространств.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Алексей Петров" class="member-photo">
+                    <h3 class="member-name">Алексей Петров</h3>
+                    <div class="member-role">Главный архитектор</div>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Мария Иванова" class="member-photo">
+                    <h3 class="member-name">Мария Иванова</h3>
+                    <div class="member-role">Дизайнер интерьеров</div>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Дмитрий Сидоров" class="member-photo">
+                    <h3 class="member-name">Дмитрий Сидоров</h3>
+                    <div class="member-role">Инженер-проектировщик</div>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы секция -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <div class="testimonial-content">
+                <p class="testimonial-text">"Работа с Wishbone превзошла все наши ожидания. Они не только создали потрясающий дизайн нашего дома, но и обеспечили безупречный процесс строительства. Мы абсолютно довольны результатом!"</p>
+                <div class="testimonial-author">Ольга и Сергей Новиковы</div>
+                <div class="testimonial-role">Владельцы дома "Сосны"</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты секция -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <span class="section-subtitle">Контакты</span>
+                    <h2 class="section-title">Готовы начать проект?</h2>
+                    <p>Свяжитесь с нами, чтобы обсудить ваши идеи и узнать, как мы можем помочь в реализации вашего проекта.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Адрес</h3>
+                            <p>ул. Архитекторов, 15, Москва, Россия</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Телефон</h3>
+                            <p>+7 (495) 123-45-67</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@wishbone.ru</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Ваш email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Тема сообщения">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Расскажите о вашем проекте" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">Wish<span>bone</span></div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Wishbone Architecture. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Изменение шапки при прокрутке
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Плавная прокрутка для навигации
+        document.querySelectorAll('nav a, .hero-scroll, .btn[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Мобильное меню
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Закрытие мобильного меню при клике на ссылку
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                if(window.innerWidth <= 768) {
+                    nav.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
